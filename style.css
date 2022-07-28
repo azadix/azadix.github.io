@@ -1,0 +1,154 @@
+body {
+  background-color: #1F1F1F;
+  font-family:'Roboto',sans-serif;
+}
+
+#allContainers {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#allContainers>* {
+  flex: 0 0 31%;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#controls > button {
+  width: 24%;
+  color: white;
+  min-height: 3rem;
+  font-size: 1.5rem;
+  background-color: #151515;
+  border-radius: 3px;
+  margin: 3px;
+}
+
+#controls > button:hover {
+  color: gold;
+  background: #202020;
+}
+
+@media (max-width: 700px) {
+	#controls {
+  		flex-direction: column;
+	}
+	#controls>button {
+  		width: 100%;
+	}
+}
+
+@media (max-width: 1400px) {
+	#allContainers>* {
+  		flex: 0 0 47.5%;
+	}
+}
+
+@media (max-width: 900px) {
+	#allContainers {
+		flex-direction: column;
+	}
+}
+
+.noteContent {
+  background-color: white;
+  width: 100%;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 1rem;
+  margin-inline: 0;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.noteContainer {
+  background-color: #151515;
+  margin: 0.5rem;
+  display: block;
+  width: 95vw;
+  height: 10%;
+  box-shadow: 5px 5px 12px 1px rgb(45,45,45);
+  border-radius: 2px;
+}
+
+.noteButtons {
+  border: none;
+  background-color: #151515;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding-inline: 0.5rem;
+}
+
+.containerButtons {
+  border: none;
+  background-color: #151515;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  min-height: 1.5rem;
+  font-size: 1.1rem;
+  float: right;
+  cursor: pointer;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.containerButtons:hover {
+  color: gold;
+}
+
+.containerControls {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gold;
+  cursor: grab;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+}
+
+.ghost {
+  background-color: gold;
+  opacity: 0.4;
+}
+
+.containerTitle {
+  background-color: #151515;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0;
+  border: 2px solid gold;
+  text-align: center;
+}
+
+.containerTitle:empty:not(:focus)::before {
+  content: attr(title-placeholder);
+  opacity: 0.5;
+}
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+.handle {
+  margin-inline: 0.5rem;
+  cursor: grab;
+  color: white;
+}
